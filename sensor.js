@@ -1,8 +1,11 @@
 const mongoose = require("mongoose")
-const User = require('.user.js');
+
 const sensorDataSchema = new mongoose.Schema({
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },// Reference to the user who owns this sensor data
-  value: { type: Number, required: true }, // Sensor value
+ // user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },// Reference to the user who owns this sensor data
+  a1: { type: Number, required: true }, // Sensor value
+  d1: { type: Number, required: true },
+  a2: { type: Number, required: true }, // Sensor value
+  d22: { type: Number, required: true },
   timestamp: { type: Date, default: Date.now } // Timestamp of when the sensor data was received
 });
 
